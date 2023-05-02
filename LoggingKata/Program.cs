@@ -76,12 +76,13 @@ namespace LoggingKata
                 }
             }
 
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Console.WriteLine();
             Console.WriteLine();
             var miles = Math.Round(tbellDistance * .00062);
-            Console.WriteLine($"WIth a distance of {miles} miles, {tBell1.Name} and {tBell2.Name} are farthest apart!!");
-            Console.WriteLine(tbellDistance);
-
+            Console.WriteLine($"WIth a distance of {miles} miles, {tBell1.Name} and {tBell2.Name} are the farthest apart!!");
+            Console.ResetColor();
             // Now, compare the two using `.GetDistanceTo()`, which returns a double
             // If the distance is greater than the currently saved distance,
             // update the distance and the two `ITrackable` variables you set above
